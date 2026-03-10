@@ -1,4 +1,4 @@
-# Introduction to MATLAB
+# Introduction to MATLAB (NOT THAT IMPORTANT)
 
 ## Course Introduction
 
