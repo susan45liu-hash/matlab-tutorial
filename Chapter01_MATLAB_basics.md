@@ -70,6 +70,16 @@ The `format` command only affects the output format of data; it does not affect 
   ans =
   16.6667
 ```
+### Commonly used mathematical functions
+#### The function call format is as follows:
+Function name (value)
+
+
+
+
+
+
+
 
 
 
