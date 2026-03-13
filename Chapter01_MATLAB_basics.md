@@ -2,6 +2,17 @@
 
 ## 1.1 MATLAB Environment
 ### 1.1.1 MATLAB Execution Order / Search Path:
+### MATLAB Execution Priority
+```mermaid
+flowchart LR
+A[Variable] --> B[Built-in Function]
+B --> C[Program File]
+C --> D[Current Folder]
+C --> E[Search Path]
+```
+<details>
+<summary>Show Chinese translation</summary>
+   
 ```mermaid
 flowchart LR
 A[Variable 变量] --> B[Built-in Function 内部函数]
@@ -9,6 +20,8 @@ B --> C[Program File 程序文件]
 C --> D[Current Folder 当前文件夹]
 C --> E[Search Path 搜索路径文件夹]
 ```
+</details>
+
 ## 1.2 Numerical Data
 ### 1.2.1 Classification of numeric data types: Integer, floating-point, complex number
 #### Function — to find the signed 8-digit integer format of a given decimal number: 
@@ -142,6 +155,46 @@ ans =
      -3
 ```
 ## 1.3 Variables and Operations
+The data processed by the computer is stored in memory. Each memory location has a unique address. The program accesses the memory unit through the address of this memory unit. In high-level languages, you don't need to specify the address of a memory location; you only need to give each memory location a name, and then you can access the memory location using that name.
+
+<details>
+<summary>Chinese explanation</summary>
+（计算机处理的数据都是存放于内存单元中的。每个内存单元都有一个唯一的地址。程序就是通过这个内存单元的地址，来访问内存单元。在高级语言中，不需要给出内存单元的地址，只需要给每个内存单元取一个名字，然后就可以通过这个名字访问内存单元了。）
+</details>
+
+### Variables, Assignment statements
+Variable: An abstraction of a memory unit.
+<details>
+<summary>Chinese explanations</summary>
+（变量：内存单元的一个抽象）
+<>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 1.4 Matrix Representation
 
