@@ -164,13 +164,19 @@ The data processed by the computer is stored in memory. Each memory location has
 
 ### Variables, Assignment statements
 Variable: An abstraction of a memory unit.
+
+Variable names: must begin with a letter, followed by a sequence of letters/numbers/underscores, with a maximum of 63 characters.
+
+Variable names are case sensitive.
+               
 <details>
 <summary>Chinese explanations</summary>
-（变量：内存单元的一个抽象）
+（变量：内存单元的一个抽象
+
+（变量名：是必须以字母开头，后接字母/数字/下划线的字符序列，最多63个字符，否则报错）
+
+（变量名区分字母大小写）
 </details>
-
-
-
 
 
 
