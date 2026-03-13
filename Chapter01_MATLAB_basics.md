@@ -167,7 +167,7 @@ Variable: An abstraction of a memory unit.
 <details>
 <summary>Chinese explanations</summary>
 （变量：内存单元的一个抽象）
-<>
+</details>
 
 
 
