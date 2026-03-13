@@ -162,23 +162,27 @@ The data processed by the computer is stored in memory. Each memory location has
 （计算机处理的数据都是存放于内存单元中的。每个内存单元都有一个唯一的地址。程序就是通过这个内存单元的地址，来访问内存单元。在高级语言中，不需要给出内存单元的地址，只需要给每个内存单元取一个名字，然后就可以通过这个名字访问内存单元了。）
 </details>
 
-### Variables, Assignment statements
+### Variables
 Variable: An abstraction of a memory unit.
 
 Variable names: must begin with a letter, followed by a sequence of letters/numbers/underscores, with a maximum of 63 characters.
 
 Variable names are case sensitive.
+
+MATLAB's standard function names and command names are generally in lowercase.
                
 <details>
 <summary>Chinese explanations</summary>
-（变量：内存单元的一个抽象
+（变量：内存单元的一个抽象）
 
 （变量名：是必须以字母开头，后接字母/数字/下划线的字符序列，最多63个字符，否则报错）
 
 （变量名区分字母大小写）
+
+（Matlab提供的标准函数名及命令名一般用小写字母）
 </details>
 
-
+### Assignment statements
 
 
 
