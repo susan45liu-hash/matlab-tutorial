@@ -154,6 +154,22 @@ ans =
 ans =
      -3
 ```
+#### Mathematical operations
+1. Find the square root: `sqrt()`
+
+2. Natural exponential function：`exp()`
+```matlab
+>>x=sqrt(7)-2i;
+>>y=exp(pi/2)
+>>z=(5+cosd(47))/(1+abs(x-y))
+
+
+```
+
+
+
+
+
 ## 1.3 Variables and Operations
 The data processed by the computer is stored in memory. Each memory location has a unique address. The program accesses the memory unit through the address of this memory unit. In high-level languages, you don't need to specify the address of a memory location; you only need to give each memory location a name, and then you can access the memory location using that name.
 
@@ -182,12 +198,22 @@ MATLAB's standard function names and command names are generally in lowercase.
 （Matlab提供的标准函数名及命令名一般用小写字母）
 </details>
 
-### Assignment statements
+### Assignment statements 赋值语句
+Two formats
 
+1. variable=expression
+<details>
+<summary>Chinese explanations</summary>
+将右边表达式的值赋给左边变量
+</details>
 
+2.expression
 
-
-
+Assigning the value of an expression to a predefined MATLAB variable `ans` will display the result in the command-line window. If a semicolon is added to the assignment statement, MATLAB will only perform the assignment operation and will not display the result.
+<details>
+<summary>Chinese explanations</summary>
+将表达式的值赋给matlab的预定义变量ans，变量结果会在命令行窗口中显示出来。如果在赋值语句中加分号，那么matlab只会进行赋值操作，不会再显示运算后的变量结果。
+</details>
 
 
 
