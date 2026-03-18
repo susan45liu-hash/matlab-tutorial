@@ -4,9 +4,4 @@ This website records my learning process of MATLAB based on the MOOC course from
 
 ## Contents
 
-1. MATLAB Basics
-2. Variables
-3. Matrix Operations
-4. Plotting
-5. Functions
-6. Data Analysis
+- [MATLAB Basics](01_matlab_basics.md)
