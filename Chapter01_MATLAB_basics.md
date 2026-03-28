@@ -223,14 +223,19 @@ Expression Evaluation
 
 Compute the following expression and assign the result to variable `z`:
 
-\[
+$$
 z = \frac{5 + \cos(47^\circ)}{1 + |x - y|}
-\]
+$$
 
 where:
 
-- \( x = \sqrt{7} - 2i \)
-- \( y = e^{\pi/2} \)
+$$
+x = \sqrt{7} - 2i
+$$
+
+$$
+y = e^{\pi/2}
+$$
 
 MATLAB Code
 
@@ -239,21 +244,48 @@ x = sqrt(7) - 2i;
 y = exp(pi/2);
 z = (5 + cosd(47)) / (1 + abs(x - y))
 ```
+Output
+
+```matlab
+z =
+  1.4395
+```
 <details> <summary>Chinese Explanation</summary>
+这道题的公式英文读作：
+
+Compute z equals five plus cosine of forty-seven degrees,
+
+divided by one plus the absolute value of x minus y,
+
+where x equals the square root of seven minus two i,
+
+and y equals e to the power of pi over two.
+
+这道题在presentation时读作：
+
+We compute z as five plus cosine of forty-seven degrees,
+
+divided by one plus the absolute value of x minus y,
+
+where x is the square root of seven minus two i,
+
+and y is e raised to the power of pi over two.
 
 计算如下表达式，并将结果赋值给变量 z：
 
 z = (5 + cos(47°)) / (1 + |x - y|)
 
-其中：
-
-x = √7 - 2i（复数）
-y = e^(π/2)
+其中：x = √7 - 2i（复数）   y = e^(π/2)
 
 说明：
 
-cosd(47) 表示角度制余弦
-abs(x - y) 表示复数的模
+x调用了求平方根函数`sqrt`；
+
+y调用了自然指数函数`exp`，e^(π/2)不能写成乘方的形式；
+
+z调用了cosd(47) 表示角度制余弦，abs(x - y) 表示复数的模，写代码时分子分母一定要加括号。
+
+命令中的pi和i都是matlab预先定义的变量，分别代表圆周率和虚数单位。
 </details> 
 
 
