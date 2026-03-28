@@ -215,7 +215,46 @@ Assigning the value of an expression to a predefined MATLAB variable `ans` will 
 将表达式的值赋给matlab的预定义变量ans，变量结果会在命令行窗口中显示出来。如果在赋值语句中加分号，那么matlab只会进行赋值操作，不会再显示运算后的变量结果。
 </details>
 
+---
 
+Example: Title
+
+Expression Evaluation
+
+Compute the following expression and assign the result to variable `z`:
+
+\[
+z = \frac{5 + \cos(47^\circ)}{1 + |x - y|}
+\]
+
+where:
+
+- \( x = \sqrt{7} - 2i \)
+- \( y = e^{\pi/2} \)
+
+MATLAB Code
+
+```matlab
+x = sqrt(7) - 2i;
+y = exp(pi/2);
+z = (5 + cosd(47)) / (1 + abs(x - y))
+```
+<details> <summary>Chinese Explanation</summary>
+
+计算如下表达式，并将结果赋值给变量 z：
+
+z = (5 + cos(47°)) / (1 + |x - y|)
+
+其中：
+
+x = √7 - 2i（复数）
+y = e^(π/2)
+
+说明：
+
+cosd(47) 表示角度制余弦
+abs(x - y) 表示复数的模
+</details> 
 
 
 
