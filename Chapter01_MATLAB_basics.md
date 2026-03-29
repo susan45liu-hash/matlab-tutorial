@@ -1,6 +1,6 @@
 # Chapter 1 MATLAB Basics
 
-## 1.1 MATLAB Environment
+## 1.1 MATLAB System Environment
 ### 1.1.1 MATLAB Execution Order / Search Path:
 ### MATLAB Execution Priority
 ```mermaid
@@ -22,7 +22,7 @@ C --> E[Search Path 搜索路径文件夹]
 ```
 </details>
 
-## 1.2 Numerical Data
+## 1.2 MATLAB Numerical Data
 ### 1.2.1 Classification of numeric data types: Integer, floating-point, complex number
 #### Function — to find the signed 8-digit integer format of a given decimal number: 
 `int8`, `uint8`
@@ -166,7 +166,7 @@ ans =
 
 ```
 
-## 1.3 Variables and Operations
+## 1.3 Variables
 The data processed by the computer is stored in memory. Each memory location has a unique address. The program accesses the memory unit through the address of this memory unit. In high-level languages, you don't need to specify the address of a memory location; you only need to give each memory location a name, and then you can access the memory location using that name.
 
 <details>
@@ -350,7 +350,7 @@ If we need to use variables a and x after re-entering MATLAB, load the mydata.ma
 >>load mydata
 ```
 
-## 1.4 Matrix Representation
+## 1.4 MATLAB Matrix Representation
 Matrices are the most basic data objects in MATLAB. Most MATLAB operations and commands are performed within the framework of matrix operations. MATLAB offers highly flexible matrix usage; the dimensions and type of the matrix are automatically set based on user input without requiring explicit specification.
 ### 1.4.1 Enter a matrix
 **1. Enter directly**
@@ -504,11 +504,32 @@ b = {
 };
 ```
 
+## 1.5 Matrix Elements Reference
+
+Referencing matrix elements by index
 
 
 
-## 1.5 Accessing Matrix Elements
 
-## 1.6 Basic Operations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 1.6 Basic Operations of MATLAB
 
 ## 1.7 String Processing
