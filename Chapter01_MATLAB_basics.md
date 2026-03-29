@@ -431,6 +431,8 @@ x =
    0   0.6283   1.2566   1.8850   2.5133   3.1416
 ```
 ### 1.4.3 Structure Matrix and Element Matrix
+**Each element** of the structure matrix has members, and each member has its own name. While **each element** of the unit matrix represents different types of data.
+
 **1. Structure Matrix**
 
 An entity composed of various types of data items.
@@ -462,7 +464,7 @@ a(2).x3 = [34, 191; 27, 578];
 a(3).x2 = 'cai';
 a(3).x3 = [13, 890; 67, 231];
 ```
-Entering the above code will create the structure matrix *a*.
+Entering the above code will create the structure matrix *a*. 
 
 * `a` is a structure array（结构体数组）
 * `x1`, `x2`, `x3` are fields（字段）
@@ -489,9 +491,18 @@ Entering the above code will create the structure matrix *a*.
 * 每个字段可以存储不同类型的数据（数值、字符串、矩阵）
 </details>
 
+**2. Element Matrix**
+Input directly, similar to a regular matrix, but using curly braces instead of square brackets.
 
-
-
+```matlab
+>> b = {10,'liu',[11,21;34,78];12,'wang',[34,191;27,578];...
+14, 'cai', [13, 890; 67, 231]
+b = {
+    10, 'liu',  [11, 21; 34, 78];
+    12, 'wang', [34, 191; 27, 578];
+    14, 'cai',  [13, 890; 67, 231]
+};
+```
 
 
 
