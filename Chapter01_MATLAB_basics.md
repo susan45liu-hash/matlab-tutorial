@@ -166,10 +166,6 @@ ans =
 
 ```
 
-
-
-
-
 ## 1.3 Variables and Operations
 The data processed by the computer is stored in memory. Each memory location has a unique address. The program accesses the memory unit through the address of this memory unit. In high-level languages, you don't need to specify the address of a memory location; you only need to give each memory location a name, and then you can access the memory location using that name.
 
@@ -202,12 +198,13 @@ MATLAB's standard function names and command names are generally in lowercase.
 Two formats
 
 1. variable=expression
+
 <details>
 <summary>Chinese explanations</summary>
 将右边表达式的值赋给左边变量
 </details>
 
-2.expression
+2. expression
 
 Assigning the value of an expression to a predefined MATLAB variable `ans` will display the result in the command-line window. If a semicolon is added to the assignment statement, MATLAB will only perform the assignment operation and will not display the result.
 <details>
@@ -288,22 +285,167 @@ z调用了cosd(47) 表示角度制余弦，abs(x - y) 表示复数的模，写�
 命令中的pi和i都是matlab预先定义的变量，分别代表圆周率和虚数单位。
 </details> 
 
+---
 
+### Predefined variables 预定义变量
+Predefined variables are variables defined by the system itself.
 
+1. `ans` Default assignment variable. 
 
+When you enter an expression in the command window, the value of the expression is automatically assigned to `ans`.
+<details> <summary>Chinese Explanation</summary>
+当在命令窗口输入一个表达式时，表达式的值会自动赋给ans。
+</details> 
 
+2. `i``j`Imaginary unit
 
+3. `pi`π
 
+4. `NaN` Represents a non-numeric value.
 
+When drawing a graph, if you want to crop out a portion, simply set the coordinates of the part to be cropped to NaN.
+<details> <summary>Chinese Explanation</summary>
+在绘图的时候如果想裁掉一部分，那么只要把要裁掉部分的坐标数据设为NaN就可以了。
+</details> 
 
+---
 
+Since these predefined variables have specific meanings, we should avoid reassigning them as much as possible. For example, `i` represents the imaginary unit, but it's conventionally used as a loop variable in programs. In this case, `i` is no longer a predefined variable.
+<details> <summary>Chinese Explanation</summary>
+既然这些预定义变量有特定的含义，在使用时就要尽量避免对它们重新赋值。例如i代表虚数单位，但习惯上在程序中用i作为循环变量。这时i就不再是预定义变量了。
+</details> 
 
+---
 
+### Variable management
+1. Deletion and modification of memory variables
 
+① In the workspace window, right-click on a variable and select the corresponding modification operation from the shortcut menu.
+<details> <summary>Chinese Explanation</summary>
+工作区窗口，右击某个变量，在快捷菜单中选择相应的修改操作
+</details> 
 
+② `who` Display the name of the resident variable.
 
+`whos` Displays information such as the name, size, number of bytes occupied, and data type of the resident variable.
+
+2. Memory variable file 内存变量文件
+
+The file used to store variables in the MATLAB workspace is called a memory variable file, and its extension is .mat, also known as a MAT file.
+
+This is a standard binary format file used by MATLAB to save data.
+
+① `save` Create memory variable file.
+
+② `load` Load memory variable file.
+
+Assuming variables a and x exist in the MATLAB workspace, enter the command
+```matlab
+>> save mydata a x
+```
+will save variables a and x in the file mydata.mat.
+
+If we need to use variables a and x after re-entering MATLAB, load the mydata.mat file into the workspace.
+```matlab
+>>load mydata
+```
 
 ## 1.4 Matrix Representation
+Matrices are the most basic data objects in MATLAB. Most MATLAB operations and commands are performed within the framework of matrix operations. MATLAB offers highly flexible matrix usage; the dimensions and type of the matrix are automatically set based on user input without requiring explicit specification.
+### Enter a matrix
+1. Enter directly
+
+Square brackets. Comma or spaces separate elements, semicolons separate lines.
+```matlab
+>> A=[1,2,3;4,5,6;7,8,9]
+A =
+  1  2  3
+  4  5  6
+  7  8  9
+```
+
+2. Use the existing matrix to build a larger matrix
+```matlab
+>> A=[1,2,3;4,5,6;7,8,9];
+>> B=[-1,-2,-3;-4,-5,-6;-7,-8,-9];
+>> C=[A,B;B,A]
+```
+Output
+```matlab
+C =
+   1   2   3  -1  -2  -3
+   4   5   6  -4  -5  -6
+   7   8   9  -7  -8  -9
+  -1  -2  -3   1   2   3
+  -4  -5  -6   4   5   6
+  -7  -8  -9   7   8   9
+```
+3. Complex matrices can be constructed using real and imaginary parts.
+```matlab
+>> B=[1,2,3;4,5,6];
+>> C=[6,7,8;9,10,11];
+>> A=B+i*C
+```
+Output. Correspondence
+```matlab
+A =
+ 1.0000 + 6.0000i   2.0000 + 7.0000i   3.0000 + 8.0000i
+ 4.0000 + 9.0000i   5.0000 +10.0000i   6.0000 +11.0000i
+```
+### Vector generation
+1. Colon expression.
+
+$$
+e1:e2:e3
+$$
+
+e1: Initial value
+
+e2: Step size
+
+e3: Terminating value
+
+If step size e2 is omitted, the step size is 1.
+```matlab
+>> t=0:1:5
+t =
+   0 1 2 3 4 5
+```
+```matlab
+>> t=0:5
+t =
+   0 1 2 3 4 5
+```
+2. `linspace(a,b,n)`
+
+`a`: First element
+
+`b`: Last element
+
+`n`: Total number of elements
+
+When `n` is omitted, 100 elements are automatically generated.
+```matlab
+>> x=(0,pi,6)
+x =
+   0   0.6283   1.2566   1.8850   2.5133   3.1416
+```
+### Structure Matrix and Element Matrix
+1. Structure Matrix
+
+An entity composed of various types of data items.
+
+A matrix composed of structured data is a structure matrix. Each element in the structure matrix is ​​a structure data type.
+
+e.g. A student's data entity includes data items such as student ID, gender, and name. These are interconnected; representing them separately would fail to reflect the integrity of the data.
+
+
+
+
+
+
+
+
 
 ## 1.5 Accessing Matrix Elements
 
