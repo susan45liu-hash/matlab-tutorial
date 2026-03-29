@@ -92,7 +92,7 @@ Function name (value)
 
 During the operation, the function is applied to each element of the matrix, so the result is still a matrix.
 #### Changes in common functions
-1. Trigonometric functions.
+**1. Trigonometric functions.**
 
 In radians（弧度）: `sin()`
 
@@ -107,7 +107,7 @@ ans =
 ans =
      1
 ```
-2. The `abs` function can calculate:
+**2. The `abs` function can calculate:**
 
 the absolute value of a real number（实数的绝对值）,
 
@@ -155,9 +155,9 @@ ans =
      -3
 ```
 #### Mathematical operations
-1. Find the square root: `sqrt()`
+**1. Find the square root: `sqrt()`**
 
-2. Natural exponential function：`exp()`
+**2. Natural exponential function：`exp()`**
 ```matlab
 >>x=sqrt(7)-2i;
 >>y=exp(pi/2)
@@ -174,7 +174,7 @@ The data processed by the computer is stored in memory. Each memory location has
 （计算机处理的数据都是存放于内存单元中的。每个内存单元都有一个唯一的地址。程序就是通过这个内存单元的地址，来访问内存单元。在高级语言中，不需要给出内存单元的地址，只需要给每个内存单元取一个名字，然后就可以通过这个名字访问内存单元了。）
 </details>
 
-### Variables
+### 1.3.1 Variables
 Variable: An abstraction of a memory unit.
 
 Variable names: must begin with a letter, followed by a sequence of letters/numbers/underscores, with a maximum of 63 characters.
@@ -194,17 +194,17 @@ MATLAB's standard function names and command names are generally in lowercase.
 （Matlab提供的标准函数名及命令名一般用小写字母）
 </details>
 
-### Assignment statements 赋值语句
+### 1.3.2 Assignment statements 赋值语句
 Two formats
 
-1. variable=expression
+**1. variable=expression**
 
 <details>
 <summary>Chinese explanations</summary>
 将右边表达式的值赋给左边变量
 </details>
 
-2. expression
+**2. expression**
 
 Assigning the value of an expression to a predefined MATLAB variable `ans` will display the result in the command-line window. If a semicolon is added to the assignment statement, MATLAB will only perform the assignment operation and will not display the result.
 <details>
@@ -287,21 +287,21 @@ z调用了cosd(47) 表示角度制余弦，abs(x - y) 表示复数的模，写�
 
 ---
 
-### Predefined variables 预定义变量
+### 1.3.3 Predefined variables 预定义变量
 Predefined variables are variables defined by the system itself.
 
-1. `ans` Default assignment variable. 
+**1. `ans` Default assignment variable.**
 
 When you enter an expression in the command window, the value of the expression is automatically assigned to `ans`.
 <details> <summary>Chinese Explanation</summary>
 当在命令窗口输入一个表达式时，表达式的值会自动赋给ans。
 </details> 
 
-2. `i``j`Imaginary unit
+**2. `i``j`Imaginary unit**
 
-3. `pi`π
+**3. `pi`π**
 
-4. `NaN` Represents a non-numeric value.
+**4. `NaN` Represents a non-numeric value.**
 
 When drawing a graph, if you want to crop out a portion, simply set the coordinates of the part to be cropped to NaN.
 <details> <summary>Chinese Explanation</summary>
@@ -317,8 +317,8 @@ Since these predefined variables have specific meanings, we should avoid reassig
 
 ---
 
-### Variable management
-1. Deletion and modification of memory variables
+### 1.3.4 Variable management
+**1. Deletion and modification of memory variables**
 
 ① In the workspace window, right-click on a variable and select the corresponding modification operation from the shortcut menu.
 <details> <summary>Chinese Explanation</summary>
@@ -329,7 +329,7 @@ Since these predefined variables have specific meanings, we should avoid reassig
 
 `whos` Displays information such as the name, size, number of bytes occupied, and data type of the resident variable.
 
-2. Memory variable file 内存变量文件
+**2. Memory variable file 内存变量文件**
 
 The file used to store variables in the MATLAB workspace is called a memory variable file, and its extension is .mat, also known as a MAT file.
 
@@ -352,8 +352,8 @@ If we need to use variables a and x after re-entering MATLAB, load the mydata.ma
 
 ## 1.4 Matrix Representation
 Matrices are the most basic data objects in MATLAB. Most MATLAB operations and commands are performed within the framework of matrix operations. MATLAB offers highly flexible matrix usage; the dimensions and type of the matrix are automatically set based on user input without requiring explicit specification.
-### Enter a matrix
-1. Enter directly
+### 1.4.1 Enter a matrix
+**1. Enter directly**
 
 Square brackets. Comma or spaces separate elements, semicolons separate lines.
 ```matlab
@@ -364,7 +364,7 @@ A =
   7  8  9
 ```
 
-2. Use the existing matrix to build a larger matrix
+**2. Use the existing matrix to build a larger matrix**
 ```matlab
 >> A=[1,2,3;4,5,6;7,8,9];
 >> B=[-1,-2,-3;-4,-5,-6;-7,-8,-9];
@@ -380,7 +380,7 @@ C =
   -4  -5  -6   4   5   6
   -7  -8  -9   7   8   9
 ```
-3. Complex matrices can be constructed using real and imaginary parts.
+**3. Complex matrices can be constructed using real and imaginary parts.**
 ```matlab
 >> B=[1,2,3;4,5,6];
 >> C=[6,7,8;9,10,11];
@@ -392,8 +392,8 @@ A =
  1.0000 + 6.0000i   2.0000 + 7.0000i   3.0000 + 8.0000i
  4.0000 + 9.0000i   5.0000 +10.0000i   6.0000 +11.0000i
 ```
-### Vector generation
-1. Colon expression.
+### 1.4.2 Vector generation
+**1. Colon expression.**
 
 $$
 e1:e2:e3
@@ -416,7 +416,7 @@ t =
 t =
    0 1 2 3 4 5
 ```
-2. `linspace(a,b,n)`
+**2. `linspace(a,b,n)`**
 
 `a`: First element
 
@@ -430,15 +430,64 @@ When `n` is omitted, 100 elements are automatically generated.
 x =
    0   0.6283   1.2566   1.8850   2.5133   3.1416
 ```
-### Structure Matrix and Element Matrix
-1. Structure Matrix
+### 1.4.3 Structure Matrix and Element Matrix
+**1. Structure Matrix**
 
 An entity composed of various types of data items.
 
 A matrix composed of structured data is a structure matrix. Each element in the structure matrix is ​​a structure data type.
 
-e.g. A student's data entity includes data items such as student ID, gender, and name. These are interconnected; representing them separately would fail to reflect the integrity of the data.
+**e.g.** A student's data entity includes data items such as student ID, gender, and name. These are interconnected; representing them separately would fail to reflect the integrity of the data.
 
+**Syntax:**
+
+A structure array element is defined as:
+
+$$
+Structure matrix element.member name = expression
+$$
+
+---
+
+```matlab
+>>a(1).x1 = 10;
+a(1).x2 = 'liu';
+a(1).x3 = [11, 21; 34, 78];
+
+>>a(2).x1 = 12;
+a(2).x2 = 'wang';
+a(2).x3 = [34, 191; 27, 578];
+
+>>a(3).x1 = 14;
+a(3).x2 = 'cai';
+a(3).x3 = [13, 890; 67, 231];
+```
+Entering the above code will create the structure matrix *a*.
+
+* `a` is a structure array（结构体数组）
+* `x1`, `x2`, `x3` are fields（字段）
+* `a(1)`, `a(2)`, `a(3)` represent different elements in the structure array
+* Each field can store different types of data:
+
+  * Numeric values（数值）
+  * Strings（字符串）
+  * Matrices（矩阵）
+
+---
+
+<details>
+<summary>Chinese Explanation</summary>
+结构体数组的基本格式为：
+   
+结构矩阵元素.成员名 = 表达式
+
+说明：
+   
+* a 是结构体数组
+* x1、x2、x3 是字段
+* a(1)、a(2)、a(3) 表示不同元素
+* 每个字段可以存储不同类型的数据（数值、字符串、矩阵）
+</details>
 
 
 
