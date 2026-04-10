@@ -506,20 +506,84 @@ b = {
 
 ## 1.5 Matrix Elements Reference
 
-Referencing matrix elements by index
+①Referencing matrix elements by index
+```matlab
+>> A=[1,2,3;4,5,6]
+>> A(4,5)=10
+A =
+   1  2  3  0  0
+   4  5  6  0  0
+   0  0  0  0  0
+   0  0  0  0 10
+```
+
+②Use the index of the matrix element to reference the matrix element.
+
+In MATLAB, matrix elements are stored column-wise. The index of a matrix element determines its order in memory.
+
+<details>
+<summary>Chinese Explanation</summary>
+Matlab中矩阵元素按列存储。矩阵元素的序号就是其在内存中的排列顺序。
+</details>
+
+```matlab
+>> A=[1,2,3;4,5,6]
+>> A(3)
+ans= 
+     2
+```
+
+The index and subscript are in one-to-one correspondence. Taking an m*n matrix A as an example, the index of matrix element A(i,j) is (j-1)*m+1.
+
+<details>
+<summary>Chinese Explanation</summary>
+序号与下标是一一对应的，以m×n矩阵A为例，矩阵元素A(i,j)的序号为(j-1)*m+i
+</details>
+
+The index and subscript of matrix elements can be converted to each other using `sub2ind` and `ind2sub`.
+
+<details>
+<summary>Chinese Explanation</summary>
+矩阵元素的序号与下标用sub2ind和ind2sub相互转换
+</details>
+
+`sub2ind`: Convert the row and column indices of specified elements in a matrix into their stored serial numbers.
+
+<details>
+<summary>Chinese Explanation</summary>
+将矩阵中指定元素的行、列下标转换成存储的序号
+</details>
+
+The calling format is:
+
+$$
+D = sub2ind(S,I,J)
+$$
+
+Where **S** is the number of rows and columns of the matrix to be transformed, and is a vector consisting of the number of rows and columns, which we usually obtain using the size function.
+
+I is the row index of the matrix element to be transformed.
+
+J is the subscript of the matrix element to be transformed.
+
+If I and J are matrices, this means converting the row and column indices of multiple elements in the matrix into storage indices. Therefore, I and J must have the same number of rows and columns. 
+
+D is the index of the corresponding element, and its number of rows and columns is the same as I and J.
+
+<details>
+<summary>Chinese Explanation</summary>
+   
+“其中S是要转换的矩阵的行数和列数，是由行数和列数组成的向量，通常我们用size函数来获取。”S就是矩阵的大小，比如本例中size(A) = [2,3]是在说A是个两行三列的矩阵。
+   
+“I是要转换矩阵元素的行下标，J是要转换矩阵元素的列下标。”I = 第几行，J = 第几列。
+
+“如果I和J是矩阵的话，表示要将矩阵中的多个元素的行列下标转换成存储的序号，那么IJ的行列数必须相同。”你一次想查多个位置 → 就必须一一配对。比如查一个点时sub2ind([2,3], 1, 2)就是在查点查 (1,2)；查多个点时I = [1 2]，J = [2 3]，sub2ind([2,3], I, J)查的是点(1,2)和(2,3)，为什么格外强调这个是因为IJ是分开写的。如果你写I = [1 2]，J = [2 3 1]，多出来的“1”matlab无法对应，就会报错。
+
+“D为对应下标元素的序号，它的行列数与IJ相同。”D 的形状（大小）和 I、J 一样。输入I = [1 2 1]，J = [2 3 1]，D = sub2ind([2,3], I, J)，结果D = [3 6 1]
+</details>
 
 
-
-
-
-
-
-
-
-
-
-
-
+`ind2sub`: 
 
 
 
