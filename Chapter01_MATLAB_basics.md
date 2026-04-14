@@ -430,7 +430,7 @@ When `n` is omitted, 100 elements are automatically generated.
 x =
    0   0.6283   1.2566   1.8850   2.5133   3.1416
 ```
-### 1.4.3 Structure Matrix and Element Matrix
+### 1.4.3 Structure matrix and element matrix
 **Each element** of the structure matrix has members, and each member has its own name. While **each element** of the unit matrix represents different types of data.
 
 **1. Structure Matrix**
@@ -613,17 +613,48 @@ J =
   1  1  2
 ```
 
-### 1.5.3 Colon Expression to Reference
+### 1.5.3 Colon expression to reference
 
 Obtain a submatrix (A matrix consisting of a subset of the elements of a matrix).
 
 A single colon can also be used as a row/column index to indicate all rows/columns.
 
+```text
 A(i,:)            All elements in the i-th row
 A(:,j)            All elements in the j-th column
 A(i:i+m,j:j+m)    ...
 A(i:i+m,:)        ...
+```
 
+### 1.5.4 Use general vectors and the `end` operator
+to represent matrix indices to obtain submatrices.
+
+`end`: Indicates the index of the last row/column.
+
+### 1.5.5 Delete elements from an empty matrix.
+
+An empty matrix contains no elements.
+
+```matlab
+>>x=[]
+x =
+   []
+```
+
+---
+```matlab
+>>A=[1,2,3,0,0;7,0,9,2,6;1,4,-1,1,8]
+A =
+   1  2  3  0  0
+   7  0  9  2  6
+   1  4 -1  1  8
+>>A(:,[2,4])=[]
+A =
+   1  3  0
+   7  9  6
+   1 -1  8
+```
+---
 
 
 
