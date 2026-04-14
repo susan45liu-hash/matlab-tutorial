@@ -631,7 +631,7 @@ to represent matrix indices to obtain submatrices.
 
 `end`: Indicates the index of the last row/column.
 
-### 1.5.5 Delete elements from an empty matrix.
+### 1.5.5 Delete elements using an empty matrix.
 
 An empty matrix contains no elements.
 
@@ -655,19 +655,34 @@ A =
    1 -1  8
 ```
 ---
+### 1.5.6 Changing the shape of a matrix using an empty matrix
+`reshape(A,m,n)`: Rearrange matrix A into an m×n two-dimensional matrix, while keeping the total number of elements of the matrix unchanged, without changing the number of elements and storage order of the original matrix.
 
+```matlab
+>>x=[23,45,65,34,65,34,98,45,78,65,43,76]
+>>y=reshape(x,3,4)
+y =
+   23  34  98  65
+   45  65  45  43
+   65  34  78  76
+```
+`A(:)`: Stack the elements of each column of matrix A to form a column vector.
 
-
-
-
-
-
-
-
-
-
-
-
+```matlab
+>>A=[-45,65,71;27,35,91]
+A =
+   -45   65   71
+    27   35   91
+>>B=A(:)
+B =
+-45
+ 27
+ 65
+ 35
+ 71
+ 91
+```
+At this point, A() is equivalent to reshape(A, 6, 1).
 
 ## 1.6 Basic Operations of MATLAB
 
