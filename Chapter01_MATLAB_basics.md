@@ -691,9 +691,11 @@ Addition +, subtraction -, multiplication *, division (left division \ and right
 
 * MATLAB arithmetic operations are performed in the matrix sense; arithmetic operations on individual data are just a special case of matrix operations.
 
-① +, -: The matrices must be of the same type; otherwise, an error will occur. Or perform operations on a scalar and a matrix---When adding or subtracting a scalar and a matrix, perform the addition or subtraction operation on each element of the scalar and the matrix.
-② *: The number of columns in matrix A = the number of rows in matrix B. Then matrices A and B are said to be multiplicative, or said that the dimensions and sizes of matrices A and B are compatible. Else, error.
-③ Right division / and left division\: If matrix A is a non-singular square matrix, then B/A is equivalent to B*inv(A), and A\B is equivalent to inv(A)*B.
+① `+`, `-`: The matrices must be of the same type; otherwise, an error will occur. Or perform operations on a scalar and a matrix---When adding or subtracting a scalar and a matrix, perform the addition or subtraction operation on each element of the scalar and the matrix.
+
+② `*`: The number of columns in matrix A = the number of rows in matrix B. Then matrices A and B are said to be multiplicative, or said that the dimensions and sizes of matrices A and B are compatible. Else, error.
+
+③ Right division `/` and left division`\`: If matrix A is a non-singular square matrix, then `B/A` is equivalent to `B*inv(A)`, and `A\B` is equivalent to `inv(A)*B`.
 
 
 
