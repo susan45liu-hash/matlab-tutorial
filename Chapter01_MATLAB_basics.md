@@ -697,7 +697,7 @@ Addition +, subtraction -, multiplication *, division (left division \ and right
 
 ③ Right division `/` and left division`\`: If matrix A is a non-singular square matrix, then `B/A` is equivalent to `B*inv(A)`, and `A\B` is equivalent to `inv(A)*B`.
 
-
+④ Exponentiation: 
 
 
 
