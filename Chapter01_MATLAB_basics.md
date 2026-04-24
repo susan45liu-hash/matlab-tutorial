@@ -701,9 +701,17 @@ Addition +, subtraction -, multiplication *, division (left division \ and right
 
 ④ Exponentiation: A^X, where A is a square matrix and X is a scalar.
 
-
-
 * Matrix multiplication is not commutative. Matrix multiplication = row × column, inner sizes must match. Element-wise multiplication (Hadamard product), same size (same shape).
+
+#### Element-wise operation
+
+
+
+
+
+
+
+
 
 
 ### 1.6.2 Relational operations
