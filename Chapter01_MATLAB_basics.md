@@ -704,6 +704,7 @@ Addition +, subtraction -, multiplication *, division (left division \ and right
 * Matrix multiplication is not commutative. Matrix multiplication = row × column, inner sizes must match. Element-wise multiplication (Hadamard product), same size (same shape).
 
 #### Element-wise operation
+Operators: `.*`, `./`, `.\`, `.^`
 
 
 
