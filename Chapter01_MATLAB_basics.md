@@ -706,6 +706,8 @@ Addition +, subtraction -, multiplication *, division (left division \ and right
 #### Element-wise operation
 Operators: `.*`, `./`, `.\`, `.^`
 
+The two matrices must be of the same type.
+
 
 
 
