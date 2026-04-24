@@ -686,6 +686,8 @@ At this point, A() is equivalent to reshape(A, 6, 1).
 
 ## 1.6 Basic Operations of MATLAB
 
+### 1.6.1 Arithmetic operations
+
 #### Basic arithmetic operations
 Addition +, subtraction -, multiplication *, division (left division \ and right division /), exponentiation ^.
 
@@ -704,7 +706,9 @@ Addition +, subtraction -, multiplication *, division (left division \ and right
 * Matrix multiplication is not commutative.
 
 
+### 1.6.2 Relational operations
 
+### 1.6.3 Logical operations
 
 
 
