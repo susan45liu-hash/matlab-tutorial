@@ -708,7 +708,7 @@ Operators: `.*`, `./`, `.\`, `.^`
 
 The two matrices must be of the same type.
 
-
+Element-wise operations are unique and practical operators in MATLAB.
 
 
 
