@@ -912,20 +912,21 @@ ans =
 ```
 
 ### 1.7.5 String substitution and replacement
+`findstr(s1, s2)`: Returns the starting position of the shorter string within the longer string.
 
+`strrep(s1, s2, s3)`: Replaces all instances of the substring `s2` in string `s1` with the string `s3`.
 
-
-
-
-
-
-
-
-
-
-
-
-
+```matlab
+>> p=findstr(This is a test!','is')
+P=
+36
+>> p=findstr('is',This is a test!')
+ p=
+36
+>> result=strrep(This is a test!','test','class')
+result =
+This is a class!
+```
 
 
 
