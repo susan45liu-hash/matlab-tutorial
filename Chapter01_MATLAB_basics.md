@@ -822,6 +822,8 @@ The number of characters in each row of the matrix must be equal, meaning the nu
 ans =
    3
 ```
+
+### 1.7.3 String processing and referencing
 ---
 Create a string vector, and then process it as follows:   
 1. Extract a substring consisting of the first 5 characters.
@@ -854,9 +856,18 @@ ans =
 ```
 ---
 
-
-### 1.7.3 String processing and referencing
 ### 1.7.4 String conversion and comparison
+#### String execution
+Format：
+
+$$
+eval(s)
+$$
+
+`s` represents the string.
+
+
+
 ### 1.7.5 String substitution and replacement
 
 
