@@ -796,13 +796,85 @@ s =
 ```
 ---
 
-
-
-
-
-
-
 ## 1.7 String Processing
+### 1.7.1 Basic concepts of strings
+A sequence of characters enclosed in single quotes.
+### 1.7.2 String representation and referencing
+In MATLAB, a string is treated as a row vector, where each element corresponds to a character.
+```matlab
+>>xm='Central South University'
+>>xm(1:3)
+ans =
+Cen
+```
+In a string, a single quote is represented by two single quotes.
+```matlab
+>>'I''m a teacher.'
+ans =
+I'm a teacher.
+```
+
+Create a multi-line string matrix.
+The number of characters in each row of the matrix must be equal, meaning the number of columns must be the same. Use spaces to adjust the length of each row.
+```matlab
+>>ch=['abcdef';'123456']
+>>ch(2,3)
+ans =
+   3
+```
+---
+Create a string vector, and then process it as follows:   
+1. Extract a substring consisting of the first 5 characters.
+2. Reverse the string and rearrange it.
+3. Convert lowercase letters in the string to their corresponding uppercase letters, leaving the other characters unchanged.
+4. Count the number of lowercase letters in the string.
+```matlab
+>>ch='ABc123d4e56Fg9';		
+>>subch=ch(1:5)	
+subch=	
+ABc12
+```
+```matlab
+>>revch=ch(end:-1:1)
+revch=
+9gF65e4d321cBA
+```
+```matlab
+>>k=find(ch>='a'&ch<='z)
+k=
+	3 7 9 13
+>>ch(k)=ch(k)-(a'-'A)	
+ch=	
+ABC123D4E56FG9	
+```
+```matlab
+>>length(k)	
+ans =
+  4
+```
+---
+
+
+### 1.7.3 String processing and referencing
+### 1.7.4 String conversion and comparison
+### 1.7.5 String substitution and replacement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
