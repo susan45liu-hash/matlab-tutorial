@@ -865,8 +865,51 @@ eval(s)
 $$
 
 `s` represents the string.
+```matlab
+>>t=pi;
+>>m='[t,sin(t),cos(t)]';
+>>y=eval(m)
+y =
+   3.1416  0.0000  -1.0000
+```
+#### Conversion between strings and numbers
+`abs`,`double` both can be used to obtain the ASCII code value matrix corresponding to the string matrix.
 
+`char`converts ASCII code matrix to string matrix.
+```matlab
+>>s1='MATLAB';
+>>a=abs(s1)
+a =
+  77  65  84  76  65  66
+>>char(a+32)
+ans =
+matlab
+```
+#### String comparison
+Use relational operators, or string comparison functions.
 
+Relational operators: When two strings have the same length. Compare each character of two strings from left to right according to their ASCII values. The result is a numerical vector; a value of 1 indicates a valid match, and a value of 0 indicates a invalid match.
+```matlab
+>>'www0`>=`W123`
+ans =
+  1  1  1  0
+```
+
+String comparison functions are used to determine whether strings are equal. There are four comparison methods, as shown below.
+①`strcmp(s1,s2)`: This is used to compare whether strings s1 and s2 are equal. If they are equal, it returns 1; otherwise, it returns 0.
+②`strncmp(s1,s2,n)`: This function compares the first n characters of two strings to see if they are equal. If they are equal, it returns 1; otherwise, it returns 0.
+③`strcmpi(s1,s2)`: Ignore case sensitivity and compare strings s1 and s2 to see if they are equal. If they are equal, return 1; otherwise, return 0.
+④`strncmpi(s1,s2,n)`: Ignore string case and compare the first n characters of two strings to see if they are equal. If they are equal, return 1; otherwise, return 0.
+```matlab
+>>strcmp('www0','w123')
+ans =
+  0
+```
+```matlab
+strncmpi('Www0','w123',1)
+ans =
+   1
+```
 
 ### 1.7.5 String substitution and replacement
 
