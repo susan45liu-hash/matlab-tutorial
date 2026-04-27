@@ -742,17 +742,50 @@ P =
    1  0  0
    0  0  1
   
-
 ```
-
-
-
+---
 
 ### 1.6.3 Logical operations
+And `&`, Or `|`, Not `~`.
 
+#### Scalars
+For scalars `a` and `b`:
 
+① `a&b`: The result is 1 if both `a` and `b` are non-zero; otherwise, it is 0.
+
+② `a|b`: The result is 1 if either `a` or `b` is non-zero.
+
+③ `~a`: When `a` is 0, the result is 1; when `a` is non-zero, the result is 0.
+
+```matlab
+>> 3<4 & 6>5
+ans =
+   1
+```
+```matalb
+>>~(9==1)
+ans =
+   1
+```
+```matlab
+>>~9==1
+ans =
+   0
+```
+
+* Operator precedence: Among arithmetic, relational, and logical operations, arithmetic operations have the highest precedence, and logical operations have the lowest precedence. However, logical operations are unary operations, so their precedence is higher than that of binary operations.
+
+#### Same type matrix
+Elements at the same position in a matrix are operated on one by one according to scalar rules. The result is a matrix of the same type, consisting of 0s and 1s.
 
 
 
 
 ## 1.7 String Processing
+
+
+
+
+
+
+
