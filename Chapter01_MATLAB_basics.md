@@ -710,14 +710,43 @@ The two matrices must be of the same type.
 
 Element-wise operations are unique and practical operators in MATLAB.
 
-
-
-
-
-
-
+---
+Find the values ​​of y = sin x cos x for x = 0.1, 0.4, 0.7, and 1 respectively.
+```matlab
+>>x=0.1:0.3:1;
+>>y=sin(x).*cos(x)
+```
+* Ought to be element-wise operation. Since `x` is a vector, `sin x` and `cos x` are vectors of the same length as `x`. Using multiplication would result in an error because multiplying two vectors is incompatible.
+---
 
 ### 1.6.2 Relational operations
+Less than `<,` less than or equal to `<=`, greater than `>`, greater than or equal to `>=`, equal to `==`, not equal to `~=`.
+
+* If the two variables being compared are scalars, directly compare the size of the two numbers. If the relation holds, the result of the relational expression is 1; otherwise, it is 0.
+
+* When the quantities being compared are two matrices of the same type, the comparison is performed element-wise according to scalar relation rules at the same positions of the two matrices. The result is also a row-column matrix composed of 0s and 1s.
+
+* Comparing a scalar and a matrix involves comparing each element of the scalar and the matrix one by one according to the rules of scalar operations. The result is a matrix of the same type, consisting of 0s and 1s.
+
+---
+Construct a 3x3 square matrix A and determine whether the elements of A are even.
+```matlab
+>>A=[24,35,13;22,63,23;39,47,80]
+A =
+    24  35  13
+    22  63  23
+    39  47  80
+>>P=rem(A,2)==0
+P =
+   1  0  0
+   1  0  0
+   0  0  1
+  
+
+```
+
+
+
 
 ### 1.6.3 Logical operations
 
