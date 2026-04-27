@@ -778,6 +778,27 @@ ans =
 #### Same type matrix
 Elements at the same position in a matrix are operated on one by one according to scalar rules. The result is a matrix of the same type, consisting of 0s and 1s.
 
+Comparing a scalar and a matrix involves operating each element of the scalar and the matrix one by one according to the rules of scalar operations. The result is a matrix of the same type, consisting of 0s and 1s.
+
+---
+A narcissistic number is a positive integer whose sum of the cubes of its digits equals three times the number itself. Find all narcissistic numbers.
+```matlab
+>>m=100:999;
+>>m1=rem(m,10);
+>>m2=rem(fix(m/10),10);
+>>m3=fix(m/100);
+>>k=find(m==m1.*m1*m1+m2.*m2.*m2+m3.*m3.*m3)
+k =
+   54  271  272  308
+>>s=m(k)
+s =
+   153  370  371  407
+```
+---
+
+
+
+
 
 
 
