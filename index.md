@@ -16,12 +16,12 @@ This website records my learning process of MATLAB based on the MOOC course from
 - [1.6 Basic Operations of MATLAB](Chapter01_MATLAB_basics.md#16-basic-operations-of-matlab)
 - [1.7 String Processing](Chapter01_MATLAB_basics.md#17-string-processing)
 
-## [Chapter 2: MATLAB Matrix Manipulation](Chapter02_Matrix.md)
-- [2.1 Special Matrices](Chapter02_Matrix.md#21-special-matrices)
-- [2.2 Matrix Transformations](Chapter02_Matrix.md#22-matrix-transformations)
-- [2.3 Matrix Evaluations](Chapter02_Matrix.md#23-matrix-evaluations)
-- [2.4 Matrix Eigenvalues and Eigenvectors](Chapter02_Matrix.md#24-matrix-eigenvalues-and-eigenvectors)
-- [2.5 Sparse Matrices](Chapter02_Matrix.md#25-sparse-matrices)
+## [Chapter 2: MATLAB Matrix Manipulation](Chapter02_MATLAB_Matrix_Manipulation.md)
+- [2.1 Special Matrices](Chapter02_MATLAB_Matrix_Manipulation.md#21-special-matrices)
+- [2.2 Matrix Transformations](Chapter02_MATLAB_Matrix_Manipulation.md#22-matrix-transformations)
+- [2.3 Matrix Evaluations](Chapter02_MATLAB_Matrix_Manipulation.md#23-matrix-evaluations)
+- [2.4 Matrix Eigenvalues and Eigenvectors](Chapter02_MATLAB_Matrix_Manipulation.md#24-matrix-eigenvalues-and-eigenvectors)
+- [2.5 Sparse Matrices](Chapter02_MATLAB_Matrix_Manipulation.md#25-sparse-matrices)
 
 ## [Chapter 3: MATLAB Program Flow Control](Chapter03_Flow.md)
 - [3.1 Programming with Sequence Structure](Chapter03_Flow.md#31-programming-with-sequence-structure)
