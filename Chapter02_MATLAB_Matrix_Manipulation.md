@@ -62,23 +62,21 @@ ans =
   1  1  1  1  1
   1  1  1  1  1
 ```
-
-
-
+---
 
 ### 2.1.2 Special Matrices for Specific Disciplines
 
 
-### 2.1.3 Magic Square Matrices
+#### Magic Square Matrices
 
 
-### 2.1.4 Vandermonde Matrices
+#### Vandermonde Matrices
 
 
-### 2.1.5 Hilbert Matrices
+#### Hilbert Matrices
 
 
-### 2.1.6 Adjugate Matrices
+#### Adjugate Matrices
 
 
 
