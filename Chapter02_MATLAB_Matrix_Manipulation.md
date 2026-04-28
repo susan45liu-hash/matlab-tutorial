@@ -33,8 +33,8 @@ $$
 Generate a zero matrix of the same size as matrix A.
 
 ```matlab
->> A=zeros(2,3)
-A	=	
+>>A=zeros(2,3)
+A	=
   0  0  0
   0  0  0
 
@@ -44,6 +44,27 @@ ans =
   0	0	
   0	0
 ```
+---
+Example: First, generate a 5x5 matrix A consisting of two-digit random integers; next, generate a 5x5 random matrix B with a normal distribution having a mean of 0.6 and a variance of 0.1; finally, verify the identity (A+B)I = IA+BI (where I is the identity matrix).
+`rand` function: Generates a random number *x* with a uniform distribution over the open interval (0, 1).
+`fix(a+(b-a+1)*x)`: Generates a random integer with a uniform distribution over the interval [a, b].
+`randn` function: Generates a random number *x* with a standard normal distribution (mean = 0, variance = 1). `μ + σ*x`: Yields a random number with a mean of μ and a variance of σ².
+
+```matlab
+>>A=fix(10+(99-10+1)*rand(5));	
+>>B=0.6+sqrt(0.1)*randn(5);
+>>C=eye(5);
+>>(A+B)*C==C*A+B*C
+ans =
+  1  1  1  1  1
+  1  1  1  1  1
+  1  1  1  1  1
+  1  1  1  1  1
+  1  1  1  1  1
+```
+
+
+
 
 ### 2.1.2 Special Matrices for Specific Disciplines
 
