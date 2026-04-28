@@ -32,8 +32,18 @@ $$
 
 Generate a zero matrix of the same size as matrix A.
 
+```matlab
+>> A=zeros(2,3)
+A	=	
+  0  0  0
+  0  0  0
 
-
+>>zeros(size(reshape(A,3,2)))
+ans =
+  0	0	
+  0	0	
+  0	0
+```
 
 ### 2.1.2 Special Matrices for Specific Disciplines
 
