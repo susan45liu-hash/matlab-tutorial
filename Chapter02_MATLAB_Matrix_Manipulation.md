@@ -66,8 +66,14 @@ ans =
 
 ### 2.1.2 Special Matrices for Specific Disciplines
 
-
 #### Magic Square Matrices
+The turtles retrieved from the Luo River have some markings on their backs, forming a matrix.
+<img width="516" height="264" alt="image" src="https://github.com/user-attachments/assets/74a053c5-586e-4ab3-b3b4-cb3abbf8bf1e" />
+
+
+
+
+
 
 
 #### Vandermonde Matrices
