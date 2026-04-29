@@ -108,6 +108,19 @@ $$
 \begin{bmatrix} + & 对齐 + \\ 换行
 </details>
 
+In MATLAB, the function `vander(v)` generates a Vandermonde matrix based on the vector \( v \).
+
+```matlab
+A = vander(1:5)
+
+A =
+     1     1     1     1     1
+    16     8     4     2     1
+    81    27     9     3     1
+   256    64    16     4     1
+   625   125    25     5     1
+```
+
 #### Hilbert Matrices
 
 
