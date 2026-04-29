@@ -122,6 +122,8 @@ A =
 ```
 
 #### Hilbert Matrices
+The Hilbert matrix is ​​a well-known ill-conditioned matrix, meaning that a small change in any element will result in a large change in both the value and the inverse of the entire matrix.
+
 The \( n \)-th order Hilbert matrix is defined as:
 
 $$
