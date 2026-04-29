@@ -122,7 +122,7 @@ A =
 ```
 
 #### Hilbert Matrices
-The Hilbert matrix is ​​a well-known ill-conditioned matrix, meaning that a small change in any element will result in a large change in both the value and the inverse of the entire matrix.
+The Hilbert matrix is ​​a well-known ill-conditioned matrix, meaning that a small change in any element will significantly alter the value and inverse of the entire matrix. The degree of ill-conditioning is related to the matrix order.
 
 The \( n \)-th order Hilbert matrix is defined as:
 
@@ -153,12 +153,28 @@ H=
    1/4   1/5    1/6    1/7
 ```
 #### Adjugate Matrices
+Let the polynomial p(x) be a<sub>n</sub>x<sub>n</sub> + a<sub>n</sub>x<sub>n1</sub> + ... + ax + a<sub>o</sub>. Then the adjoint matrix of the polynomial is:
 
+an-1 an-2 an-3 ... 一 q<sub>1</sub> ao
 
+an an an an an an
 
+1 0 0 ... 0 0
 
+= 0 1 0 ... 0 0
 
+. ... : :
 
+0 0 0 ** 0 0
+
+0 1 0
+
+p(x) is called the characteristic polynomial of A, and the roots of the equation p(x) = 0 are called the eigenvalues ​​of A.
+
+...
+0
+...
+0
 
 
 
