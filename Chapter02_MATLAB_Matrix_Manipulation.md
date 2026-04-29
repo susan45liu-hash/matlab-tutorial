@@ -72,7 +72,8 @@ The turtles retrieved from the Luo River have some markings on their backs, form
 
 * An n-order magic square consists of n² integers: 1, 2, 3, ..., n².  
 * The sum of the n elements in each row, column, and main and secondary diagonals is equal.  
-* The sum of the elements in each row and column of an n-order magic square is (1 + 2 + 3 + ... + n²) / n = (n + n³) / 2. The MATLAB function `magic(n)` generates a specific magic square.
+* The sum of the elements in each row and column of an n-order magic square is (1 + 2 + 3 + ... + n²) / n = (n + n³) / 2.  
+* The MATLAB function `magic(n)` generates a specific magic square.
 
 ---
 Example 2 generates an 8x8 magic square. Find the sum of the elements in each row and column.
