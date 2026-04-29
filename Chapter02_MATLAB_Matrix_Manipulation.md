@@ -76,14 +76,15 @@ The turtles retrieved from the Luo River have some markings on their backs, form
 * The MATLAB function `magic(n)` generates a specific magic square.
 
 ---
-Example 2 generates an 8x8 magic square. Find the sum of the elements in each row and column.
+Example generates an 8x8 magic square. Find the sum of the elements in each row and column.
 ```matlab
->> M=magic(8);>>sum(M(1,:))
+>> M=magic(8);
+>>sum(M(1,:))
 ans=
-260
+  260
 >> sum(M(:,1))
 ans=
-260
+  260
 ```
 ---
 
