@@ -122,8 +122,34 @@ A =
 ```
 
 #### Hilbert Matrices
+The \( n \)-th order Hilbert matrix is defined as:
 
+$$
+H =
+\begin{bmatrix}
+\frac{1}{1} & \frac{1}{2} & \cdots & \frac{1}{n} \\
+\frac{1}{2} & \frac{1}{3} & \cdots & \frac{1}{n+1} \\
+\vdots      & \vdots      & \ddots & \vdots \\
+\frac{1}{n} & \frac{1}{n+1} & \cdots & \frac{1}{2n-1}
+\end{bmatrix}
+$$
 
+Each element of the Hilbert matrix is defined as:
+
+$$
+H(i,j) = \frac{1}{i + j - 1}
+$$
+
+In MATLAB, the function to generate an n-order Hilbert matrix is ​​hilb(n).
+```matlab
+>>format rat
+>>H=hilb(4)
+H=
+   1     1/2    1/3    1/4
+   1/2   1/3    1/4    1/5
+   1/3   1/4    1/5    1/6
+   1/4   1/5    1/6    1/7
+```
 #### Adjugate Matrices
 
 
