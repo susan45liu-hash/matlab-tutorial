@@ -89,7 +89,24 @@ ans=
 ---
 
 #### Vandermonde Matrices
+For a vector \( v = [v_1, v_2, \cdots, v_n] \),  
+the Vandermonde matrix is defined as:
 
+$$
+V =
+\begin{bmatrix}
+v_1^{n-1} & \cdots & v_1^2 & v_1^1 & v_1^0 \\
+v_2^{n-1} & \cdots & v_2^2 & v_2^1 & v_2^0 \\
+v_3^{n-1} & \cdots & v_3^2 & v_3^1 & v_3^0 \\
+\vdots    & \ddots & \vdots & \vdots & \vdots \\
+v_n^{n-1} & \cdots & v_n^2 & v_n^1 & v_n^0
+\end{bmatrix}
+$$
+
+<details>
+<summary>Chinese tips</summary>
+\begin{bmatrix} + & 对齐 + \\ 换行
+</details>
 
 #### Hilbert Matrices
 
