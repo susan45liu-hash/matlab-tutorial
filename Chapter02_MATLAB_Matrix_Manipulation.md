@@ -153,33 +153,33 @@ H=
    1/4   1/5    1/6    1/7
 ```
 #### Adjugate Matrices
-Let the polynomial p(x) be a<sub>n</sub>x<sub>n</sub> + a<sub>n</sub>x<sub>n1</sub> + ... + ax + a<sub>o</sub>. Then the adjoint matrix of the polynomial is:
+Let the polynomial be:
 
 $$
-A=
+p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
+$$
+
+The companion matrix（伴随矩阵） associated with this polynomial is:
+
+$$
+A =
 \begin{bmatrix}
-an-1 an-2 an-3 ... 一 q<sub>1</sub> ao
-
-an an an an an an
-
-1 0 0 ... 0 0
-
-= 0 1 0 ... 0 0
-
-. ... : :
-
-0 0 0 ** 0 0
-
-0 1 0
+-\frac{a_{n-1}}{a_n} & -\frac{a_{n-2}}{a_n} & \cdots & -\frac{a_1}{a_n} & -\frac{a_0}{a_n} \\
+1 & 0 & \cdots & 0 & 0 \\
+0 & 1 & \cdots & 0 & 0 \\
+\vdots & \vdots & \ddots & \vdots & \vdots \\
+0 & 0 & \cdots & 1 & 0
 \end{bmatrix}
+$$
 
-p(x) is called the characteristic polynomial of A, and the roots of the equation p(x) = 0 are called the eigenvalues ​​of A.
+---
 
-...
-0
-...
-0
+### Property
 
+The polynomial \( p(x) \) is the characteristic polynomial（特征多项式） of matrix \( A \),  
+and the roots of \( p(x) = 0 \) are the eigenvalues（特征值） of \( A \).
+
+---
 
 
 
