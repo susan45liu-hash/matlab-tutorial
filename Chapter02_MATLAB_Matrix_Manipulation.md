@@ -155,6 +155,9 @@ H=
 #### Adjugate Matrices
 Let the polynomial p(x) be a<sub>n</sub>x<sub>n</sub> + a<sub>n</sub>x<sub>n1</sub> + ... + ax + a<sub>o</sub>. Then the adjoint matrix of the polynomial is:
 
+$$
+A=
+\begin{bmatrix}
 an-1 an-2 an-3 ... 一 q<sub>1</sub> ao
 
 an an an an an an
@@ -168,6 +171,7 @@ an an an an an an
 0 0 0 ** 0 0
 
 0 1 0
+\end{bmatrix}
 
 p(x) is called the characteristic polynomial of A, and the roots of the equation p(x) = 0 are called the eigenvalues ​​of A.
 
