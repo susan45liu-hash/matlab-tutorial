@@ -172,21 +172,62 @@ A =
 \end{bmatrix}
 $$
 
+The polynomial \( p(x) \) is the characteristic polynomial（特征多项式） of matrix \( A \),  and the roots of \( p(x) = 0 \) are the eigenvalues（特征值） of \( A \).
+
+The MATLAB function to generate the adjoint matrix is ​​`compan(p)`, where `p` is a vector of coefficients of a polynomial, with higher-order coefficients listed first and lower-order coefficients last. For example, to generate the adjoint matrix of the polynomial x³ - 2x² - 5x + 6:
+
+```matlab
+>>p=[1,-2,-5,6];
+>>A=compan(p)
+ A=
+2  5 -6
+1  0  0
+0  1  0
+```
+#### Pascal Matrix
+
+According to the binomial theorem（二项式定理）, the coefficients of \( (x + y)^n \) form Pascal's triangle（杨辉三角）.  
+The Pascal matrix（帕斯卡矩阵） is constructed by placing these coefficients along the left diagonals:
+
+$$
+P = pascal(n)
+$$
+
+```text
+          1
+        1   1
+      1   2   1
+    1   3   3   1
+  1   4   6   4   1
+1   5  10  10   5   1
+```
+
+Each element satisfies:
+
+$$
+P(i,j) = P(i-1,j) + P(i,j-1)
+$$
+
+with:
+
+$$
+P(1,j) = 1,\quad P(i,1) = 1
+$$
+
+---
+```matlab
+P = pascal(5)
+
+P =
+     1     1     1     1     1
+     1     2     3     4     5
+     1     3     6    10    15
+     1     4    10    20    35
+     1     5    15    35    70
+```
 ---
 
-### Property
-
-The polynomial \( p(x) \) is the characteristic polynomial（特征多项式） of matrix \( A \),  
-and the roots of \( p(x) = 0 \) are the eigenvalues（特征值） of \( A \).
-
----
-
-
-
-
-
-
-
+Each element of the Pascal matrix is a binomial coefficient（组合数）.
 
 
 ## 2.2 Matrix Transformations
