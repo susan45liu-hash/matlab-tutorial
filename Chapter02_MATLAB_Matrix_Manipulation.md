@@ -187,7 +187,8 @@ The MATLAB function to generate the adjoint matrix is ​​`compan(p)`, where `
 #### Pascal Matrix
 
 According to the binomial theorem（二项式定理）, the coefficients of \( (x + y)^n \) form Pascal's triangle（杨辉三角）.  
-The Pascal matrix（帕斯卡矩阵） is constructed by placing these coefficients along the left diagonals:
+The Pascal matrix（帕斯卡矩阵） is constructed by placing these coefficients along the left diagonals.  
+Generate an n-order Pascal matrix: 
 
 $$
 P = pascal(n)
