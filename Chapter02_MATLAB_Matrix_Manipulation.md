@@ -230,8 +230,28 @@ P =
 
 Each element of the Pascal matrix is a binomial coefficient（组合数）.
 
-
 ## 2.2 Matrix Transformations
+
+
+### Diagonal matrix
+### matrix construction
+### triangular matrix
+### matrix transpose
+### left-right flip
+### top-bottom flip
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 2.3 Matrix Evaluation
 ## 2.4 Eigenvalues ​​and Eigenvectors
 ## 2.5 Sparse Matrices
